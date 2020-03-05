@@ -1,0 +1,58 @@
+<section class="section banner">
+    <div class="section_wrapper">
+        <div class="theme_slider">
+            <div class="owl-carousel owl-theme" id="owlslider">
+                <div class="item">
+                    <a href="#">
+                    <img src="<?= $this->getViewFileUrl('Theme_Banner/images/banner1.jpg'); ?>" alt="banner">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                    <img src="<?= $this->getViewFileUrl('Theme_Banner/images/banner2.jpg'); ?>" alt="banner">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                    <img src="<?= $this->getViewFileUrl('Theme_Banner/images/banner3.jpg'); ?>" alt="banner">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="static_image_wrapper">
+            <div class="static_img">
+            <a href="#">
+                    <img src="<?= $this->getViewFileUrl('Theme_Banner/images/staic_img1.jpg'); ?>" alt="banner">
+                    </a>
+            </div>
+            <div class="static_img">
+            <a href="#">
+                    <img src="<?= $this->getViewFileUrl('Theme_Banner/images/staic_img2.jpg'); ?>" alt="banner">
+                    </a>
+            </div>
+            <div class="static_img">
+            <a href="#">
+                    <img src="<?= $this->getViewFileUrl('Theme_Banner/images/staic_img3.jpg'); ?>" alt="banner">
+                    </a>
+            </div>
+            <div class="static_img">
+            <a href="#">
+                    <img src="<?= $this->getViewFileUrl('Theme_Banner/images/staic_img4.jpg'); ?>" alt="banner">
+                    </a>
+            </div>
+        </div>
+    </div>
+</section>
+    <script>
+    (function  () {
+        require(["jquery","owlcarousel"],function($) {
+            $(document).ready(function() {
+                $("#owlslider").owlCarousel({
+                    navigation : true,
+                    autoPlay: false,
+                    items : 1
+                });
+            });
+        });
+    })();
+    </script>

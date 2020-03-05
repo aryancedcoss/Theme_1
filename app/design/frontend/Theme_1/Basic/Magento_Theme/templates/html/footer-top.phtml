@@ -1,0 +1,48 @@
+<div class="top_footer">
+    <div class="section_wrapper">
+        <div class="contact_support">
+            <div class="inner">
+                <span class="footer_icon">
+                <i class="fas fa-envelope"></i>
+                </span>
+                <span class="footer_text">
+                    <h3>
+                        <?= __('Email Support'); ?>
+                    </h3>
+                    <a href="mailto:xyz@gmail.com" class="link">
+                    <?= __('xyz@gmail.com'); ?>
+                    </a>
+                </span>
+            </div>
+            <div class="inner">
+                <span class="footer_icon">
+                <i class="fas fa-blender-phone"></i>
+                </span>
+                <span class="footer_text">
+                    <h3>
+                        <?= __('Phone Support'); ?>
+                    </h3>
+                    <a href="tel:1234567890" class="link">
+                    <?= __('1234567890'); ?>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="news_letter">
+            <div class="inner">
+                <span class="footer_text">
+                    <h3>
+                        <?= __('Get Latest Deals'); ?>
+                    </h3>
+                    <p>
+                        <?= __('Our best promotions sent to your inbox.'); ?>
+                    </p>
+                </span>
+                <span class="news_letter_wrapper">
+                    <?php echo $block->getChildHtml('subscribe'); ?>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+

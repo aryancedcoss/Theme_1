@@ -1,0 +1,62 @@
+<div class="theme_header">
+    <div class="section_wrapper">
+        <div class="header_logo">
+        <?= $this->getchildHtml('logo'); ?>
+        </div>
+        <div class="header_menu">
+            <div class="store_locator">
+                <a href="#" class="link header_link" title="Store Loacator">
+                    <?= __('Store Locator'); ?>
+                </a>
+            </div>
+            <div class="header_help">
+                <span id="help" class="help header_link">
+                    <?= __('Help'); ?> <i class="fas fa-chevron-down"></i>
+                </span>
+                <div class="drop_down">
+                    <ul>
+                        <li>
+                            <a href="#" class="link">
+                                <?= __('Faq'); ?>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="link ">
+                                <?= __('Contact Us'); ?>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_search">
+                <?=  $block->getChildHtml('topSearch'); ?>
+            </div>
+            <div class="seller">
+                <a href="#" class="link header_link">
+                    <?= __('Seller Point'); ?>
+                </a>
+            </div>
+            <div class="header_account">
+                <a href="<?= $this->getUrl('customer/account/login'); ?>" class="link header_link">
+                    <?= __('Login/Register'); ?>
+                </a>
+            </div>
+            <div class="minicart_wrapper">
+                <?= $this->getChildHtml('minicart'); ?>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+requirejs(['jquery'], function( $ ) 
+{
+    $('#help').on('click', function() 
+    {
+        $('.help').toggleClass('show');
+    });
+    $('main').on('click', function() 
+    {
+        $('.help').removeClass('show');
+    });
+}); 
+</script>

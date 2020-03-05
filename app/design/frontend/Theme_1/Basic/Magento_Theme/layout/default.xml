@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/all.min.css" />
+        <css src="css/fontawesome.min.css" />
+        <css src="css/theme.css" />
+    </head>
+    <body>
+        <referenceContainer name="header.panel.wrapper" remove="true" />
+        <referenceContainer name="header-wrapper" remove="true" />
+        <referenceContainer name="footer" remove="true" />
+         <referenceContainer name="header.container">
+            <block class="Magento\Framework\View\Element\Template" name="page.header" template="Magento_Theme::html/header.phtml" /> 
+         </referenceContainer>
+         <referenceContainer name="footer-container">
+            <block class="Magento\Framework\View\Element\Template" name="footer.top" template="Magento_Theme::html/footer-top.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="footer.bottom" template="Magento_Theme::html/footer-bottom.phtml" />
+         </referenceContainer>
+         <move element="logo" destination="page.header" />
+         <move element="top.search" destination="page.header" after="-" />
+         <move element="minicart" destination="page.header" />
+         <move element="form.subscribe" destination="footer.top" before="-" />
+    </body>
+</page>
